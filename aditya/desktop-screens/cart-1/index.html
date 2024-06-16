@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <nav class="flex items-center justify-between px-4 py-2 bg-white ">
+            <div class="flex items-center space-x-2 gap-4">
+                <button class="text-4xl">&larr;</button>
+                <span class="text-2xl font-bold">Exclusive</span>
+            </div>
+            <div class="flex space-x-4 gap-4">
+                <a href="#" class="text-gray-700 font-semibold text-lg">Home</a>
+                <a href="#" class="text-gray-700 font-semibold text-lg">Contact</a>
+                <a href="#" class="text-gray-700 font-semibold text-lg">About</a>
+                <a href="#" class="text-gray-700 font-semibold text-lg">Sign Up</a>
+            </div>
+            <div class="flex items-center space-x-4 mr-14">
+                <input type="text" placeholder="What are you looking for?" class="px-12 py-1 border border-gray-300 rounded-md">
+                <button class="text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M18.83 10.83a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+                    </svg>
+                </button>
+                <button class="">
+                    <img src="icons8-heart-24.png">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </button>
+                <button class="relative">
+                  <img src="icons8-cart-24.png">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v18H3z" />
+                    </svg>
+                    <span class="absolute top-0 right-0 block h-2 w-2  rounded-full"></span>
+                </button>
+                <button class="text-gray-700">
+                    <img src="icons8-person-24.png">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <hr class="-mt-2 border-1  border-black">
+    </div>
+  <div class="w-3/4 pl-56">
+    <div class="container mx-auto mt-10">
+        <div class="w-full p-5">
+            <div class="flex items-center justify-between border-b pb-4">
+                <h1 class="text-2xl font-semibold">Cart</h1>
+                <nav class="text-sm text-gray-600">
+                    <a href="#" class=" text-gray-400 font-semibold hover:underline">Home</a> / <a href="#" class=" text-black font-semibold hover:underline">Cart</a>
+                </nav>
+            </div>
+            <div class="mt-5 ">
+                <div class="my-8 grid grid-cols-4 gap-4 text-gray-600 font-semibold bg-gray-400 p-3 rounded-lg">
+                    <div>Product</div>
+                    <div>Price</div>
+                    <div>Quantity</div>
+                    <div>Subtotal</div>
+                </div>
+                <div class=" my-8 grid grid-cols-4 gap-4 items-center mt-3 bg-gray-400 p-3 rounded-lg">
+                    <div class="flex items-center">
+                        <button class="text-red-500 mr-3">✖</button>
+                        <img src="icons8-desktop-50.png" alt="LCD Monitor" class=" object-cover">
+                        <span class="ml-3">LCD Monitor</span>
+                    </div>
+                    <div>$650</div>
+                    <div>
+                        <select class="border rounded-lg p-2">
+                            <option value="1">01</option>
+                        </select>
+                    </div>
+                    <div>$650</div>
+                </div>
+                <div class="grid grid-cols-4 gap-4 items-center mt-3 bg-gray-400 p-3 rounded-lg">
+                    <div class="flex items-center">
+                        <img src="icons8-video-game-50.png" alt="HI Gamepod" class=" object-cover">
+                        <span class="ml-3">HI Gamepad</span>
+                    </div>
+                    <div>$550</div>
+                    <div>
+                        <select class="border rounded-lg p-2">
+                            <option value="1">01</option>
+                            <option value="2" selected>02</option>
+                        </select>
+                    </div>
+                    <div>$1100</div>
+                </div>
+            </div>
+            <div class="flex justify-between items-center mt-5">
+                <button class="bg-white font-semibold text-black border-black border-2 rounded-lg px-8 py-2">Return To Shop</button>
+                <button class="bg-white font-semibold text-black border-black border-2 rounded-lg px-8 py-2">Update Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="checkout flex gap-3 ">
+    <div class=" leftbox flex gap-6 items-center   pl-56">
+        <button class="bg-white font-semibold text-gray-400 border-black border-2 rounded-lg px-8 py-2">Coupon Code</button>
+        <button class="bg-red-600 font-semibold text-white border-black border-2 rounded-lg px-8 py-2">Apply Coupon</button>
+
+        <div class="rightbox ml-56 border-2 border-black mt-10 py-3 px-16 mr-80 ">
+            <div>
+                <h1 class="font-semibold text-xl">Cart Total</h1>
+            </div>
+            <div class="gap-4 py-16">
+                <h1 class="text-lg">Sub total :$1750</h1>
+                <hr class="my-1 border-1 border-black">
+                <h1 class="text-lg">Shipping :Free</h1>
+                <hr class="my-1 border-1 border-black">
+                <h1 class="text-lg">Total :$1750</h1>
+            </div>
+            <div class="py-10">
+                <button class="bg-red-600 font-semibold text-white  border-2 rounded-lg px-8 py-2">Process to checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-900 text-white mt-20">
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-4">
+            <div>
+                <h2 class="text-lg font-semibold mb-4">Exclusive</h2>
+                <p class="mb-2 font-lg font-bold">Subscribe</p>
+                <p class="mb-4">Get 10% off your first order</p>
+                <div class="flex items-center">
+                    <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full bg-gray-800 border border-gray-700 focus:outline-none focus:border-gray-500">
+                    <button class="bg-gray-700 px-4 py-2">></button>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-lg font-semibold mb-4 leading-loose">Support</h2>
+                <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+                <p>exclusive@gmail.com</p>
+                <p>+88015-88888-9999</p>
+            </div>
+            <div>
+                <h2 class="text-lg font-semibold mb-4">Account</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:underline">My Account</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Login / Register</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Cart</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Wishlist</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-lg font-semibold mb-4">Quick Link</h2>
+                <ul>
+                    <li class="mb-2"><a href="#" class="hover:underline">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Terms Of Use</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">FAQ</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-lg font-semibold mb-4">Download App</h2>
+                <p class="mb-4">Save $3 with App New User Only</p>
+                <div class="flex mb-4 gap-4">
+                    <img src="icons8-google-play-32.png" alt="Google Play" class=" bg-white object-cover">
+                    <img src="icons8-apple-32.png" alt="App Store" class="object-cover bg-white">
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-4">
+            <p class="text-center">&copy; Copyright Rimel 2022. All right reserved</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
