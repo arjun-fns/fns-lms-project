@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.test {
+    .nested {
+        border: 1px solid;
+    }
+}
