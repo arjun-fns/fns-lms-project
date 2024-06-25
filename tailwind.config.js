@@ -2,8 +2,9 @@
 module.exports = {
     parser: 'postcss-scss',
     content: [
-       "./auth-ui/*.{html,js}",
-       "./sanket/*.{html,js}",
+        "./auth-ui/*.{html,js}",
+        "./sanket/*.{html,js}",
+        "./siddhant/*.{html,js}"
     ],
     theme: {
         extend: {},
