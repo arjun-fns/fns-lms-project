@@ -1,0 +1,20 @@
+{
+    "devDependencies": {
+      "@tailwindcss/forms": "^0.5.7",
+      "tailwindcss": "^3.4.4",
+      "postcss-scss": "^4.0.9"
+    },
+    "dependencies": {
+      "node-sass": "^9.0.0",
+      "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+      "start": "npm-run-all --parallel nodesass-run tailwind-watch",
+      "build": "npm-run-all --sequential nodesass-build tailwind-build",
+      "tailwind-watch": "tailwindcss -i ./input.css -o ./output.css --watch",
+      "nodesass-run": "node-sass ./input.scss ./input.css --watch",
+      "tailwind-build": "tailwindcss -i ./input.css -o ./output.css --minify",
+      "nodesass-build": "node-sass ./input.scss ./input.css"
+    }
+  }
+  
