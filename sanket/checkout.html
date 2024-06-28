@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../output.css" />
+    <style>
+      .checkout-form .StripeElement,
+      .checkout-form input[type="email"],
+      .checkout-form input[type="password"],
+      .checkout-form input[type="tel"],
+      .checkout-form input[type="text"],
+      .checkout-form select,
+      .checkout-form textarea {
+        border-radius: 0.375rem;
+        border-width: 1px;
+        width: 100%;
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity));
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        padding: 0.5rem 1rem;
+        --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+
+      .checkout-form input.has-error,
+      .checkout-form textarea.has-error {
+        --tw-border-opacity: 1;
+        border-color: rgb(239 68 68 / var(--tw-border-opacity));
+      }
+
+      .checkout-form label {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        margin-bottom: 0.375rem;
+        margin-top: 0.375rem;
+        text-transform: uppercase;
+        --tw-text-opacity: 1;
+        color: rgb(75 85 99 / var(--tw-text-opacity));
+      }
+
+      .checkout-form .StripeElement {
+        padding: 1rem 0.75rem;
+      }
+    </style>
+    <style>
+      .icon[data-v-4847b53f] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex flex-col min-h-[600px] mx-4">
+      <form
+        class="container flex flex-wrap items-start gap-8 my-16 mx-auto justify-evenly lg:gap-20"
+      >
+        <div class="grid w-full max-w-2xl gap-8 checkout-form md:flex-1">
+          <div>
+            <h2 class="w-full mb-2 text-2xl font-semibold leading-none">
+              Contact Information
+            </h2>
+            <p class="mt-1 text-sm text-gray-500">
+              Already have an account?
+              <a href="#" class="text-semibold">Log in</a>.
+            </p>
+            <div class="w-full mt-4">
+              <label for="email">Email</label
+              ><input
+                placeholder="johndoe@email.com"
+                type="email"
+                name="email"
+                class=""
+                required=""
+              />
+            </div>
+
+            <div class="flex items-center gap-2 my-2">
+              <label for="creat-account">Create an account?</label
+              ><input
+                id="creat-account"
+                type="checkbox"
+                name="create-account"
+              />
+            </div>
+          </div>
+          <div>
+            <h2 class="w-full mb-3 text-2xl font-semibold">Billing Details</h2>
+            <div class="grid w-full gap-4 lg:grid-cols-2">
+              <div class="w-full">
+                <label for="first-name">First Name</label
+                ><input placeholder="John" type="text" required="" />
+              </div>
+              <div class="w-full">
+                <label for="last-name">Last Name</label
+                ><input placeholder="Doe" type="text" required="" />
+              </div>
+              <div class="w-full col-span-full">
+                <label for="address1">Address 1</label
+                ><input
+                  placeholder="O'Connell Street"
+                  type="text"
+                  required=""
+                />
+              </div>
+              <div class="w-full col-span-full">
+                <label for="address2">Address 2</label
+                ><input placeholder="Dublin 1" type="text" />
+              </div>
+              <div class="w-full">
+                <label for="city">City</label
+                ><input placeholder="Dublin" type="text" required="" />
+              </div>
+              <div class="w-full">
+                <label for="state">State</label
+                ><input type="text" placeholder="State" default-value="CW" />
+              </div>
+              <div class="w-full">
+                <label for="state">Country</label>
+                <select>
+                  <option value="">Select a country</option>
+                  <option value="">Country 1</option>
+                  <option value="">Country 2</option>
+                  <option value="">Country 3</option>
+                  <option value="">Country 4</option>
+                  <option value="">Country 5</option>
+                  <option value="">Country 6</option>
+                </select>
+              </div>
+              <div class="w-full">
+                <label for="zip">ZIP (Optional)</label
+                ><input placeholder="D01 1234" type="text" />
+              </div>
+              <div class="w-full col-span-full">
+                <label for="phone">Phone (Optional)</label
+                ><input placeholder="+353871234567" type="tel" />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="mb-4 text-xl font-semibold">Select Shipping Method</h3>
+            <div class="grid gap-4 md:grid-cols-3">
+              <div
+                class="flex items-center justify-between bg-white px-2 py-4 rounded-md"
+              >
+                <p class="text-sm leading-tight text-gray-500">Free shipping</p>
+                <p class="font-semibold text-gray-600">₹0.00</p>
+              </div>
+              <div
+                class="flex items-center justify-between bg-white px-2 py-4 rounded-md"
+              >
+                <p class="text-sm leading-tight text-gray-500">
+                  Standard shipping
+                </p>
+                <p class="font-semibold text-gray-600">₹100.00</p>
+              </div>
+              <div
+                class="flex items-center justify-between bg-white px-2 py-4 rounded-md"
+              >
+                <p class="text-sm leading-tight text-gray-500">
+                  Express shipping
+                </p>
+                <p class="font-semibold text-gray-600">₹200.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-2 col-span-full">
+            <h2 class="mb-4 text-xl font-semibold">Payment Options</h2>
+            <div class="flex gap-4 leading-tight flex-wrap mb-4">
+              <div
+                class="bg-white flex px-2 py-4 rounded-md"
+                title="Pay with your credit card via Stripe."
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <rect
+                    width="416"
+                    height="320"
+                    x="48"
+                    y="96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    rx="56"
+                    ry="56"
+                  ></rect>
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="60"
+                    d="M48 192h416M128 300h48v20h-48z"
+                  ></path></svg
+                ><span class="whitespace-nowrap">Credit Card</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon ml-auto checkmark opacity-0"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m108.25 138.29l-134.4 160a16 16 0 0 1-12 5.71h-.27a16 16 0 0 1-11.89-5.3l-57.6-64a16 16 0 1 1 23.78-21.4l45.29 50.32l122.59-145.91a16 16 0 0 1 24.5 20.58"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="bg-white flex px-2 py-4 rounded-md"
+                title='SANDBOX ENABLED. You can use sandbox testing accounts only. See the <a href="https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/">PayPal Sandbox Testing Guide</a> for more details.'
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M424.81 148.79c-.43 2.76-.93 5.58-1.49 8.48c-19.17 98-84.76 131.8-168.54 131.8h-42.65a20.67 20.67 0 0 0-20.47 17.46l-21.84 137.84l-6.18 39.07a10.86 10.86 0 0 0 9.07 12.42a11 11 0 0 0 1.7.13h75.65a18.18 18.18 0 0 0 18-15.27l.74-3.83l14.24-90l.91-4.94a18.16 18.16 0 0 1 18-15.3h11.31c73.3 0 130.67-29.62 147.44-115.32c7-35.8 3.38-65.69-15.16-86.72a72.3 72.3 0 0 0-20.73-15.82"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M385.52 51.09C363.84 26.52 324.71 16 274.63 16H129.25a20.75 20.75 0 0 0-20.54 17.48l-60.55 382a12.43 12.43 0 0 0 10.39 14.22a12.6 12.6 0 0 0 1.94.15h89.76l22.54-142.29l-.7 4.46a20.67 20.67 0 0 1 20.47-17.46h42.65c83.77 0 149.36-33.86 168.54-131.8c.57-2.9 1.05-5.72 1.49-8.48c5.7-36.22-.05-60.87-19.72-83.19"
+                  ></path></svg
+                ><span class="whitespace-nowrap">PayPal</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon ml-auto checkmark opacity-0"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m108.25 138.29l-134.4 160a16 16 0 0 1-12 5.71h-.27a16 16 0 0 1-11.89-5.3l-57.6-64a16 16 0 1 1 23.78-21.4l45.29 50.32l122.59-145.91a16 16 0 0 1 24.5 20.58"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                class="bg-white flex px-2 py-4 rounded-md"
+                title="Pay with cash upon delivery."
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <rect
+                    width="448"
+                    height="256"
+                    x="32"
+                    y="80"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    rx="16"
+                    ry="16"
+                    transform="rotate(180 256 208)"
+                  ></rect>
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M64 384h384M96 432h320"
+                  ></path>
+                  <circle
+                    cx="256"
+                    cy="208"
+                    r="80"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  ></circle>
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M480 160a80 80 0 0 1-80-80M32 160a80 80 0 0 0 80-80m368 176a80 80 0 0 0-80 80M32 256a80 80 0 0 1 80 80"
+                  ></path></svg
+                ><span class="whitespace-nowrap mr-2">COD</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  class="icon ml-auto checkmark opacity-0"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48m108.25 138.29l-134.4 160a16 16 0 0 1-12 5.71h-.27a16 16 0 0 1-11.89-5.3l-57.6-64a16 16 0 1 1 23.78-21.4l45.29 50.32l122.59-145.91a16 16 0 0 1 24.5 20.58"
+                  ></path>
+                </svg>
+              </div>
+              <div class="prose">
+                <p class="text-sm text-gray-500">
+                  Pay with your credit card via Stripe.
+                </p>
+              </div>
+            </div>
+            <div id="card-element" class="StripeElement StripeElement--empty">
+              <div
+                class=""
+                style="
+                  margin: 0px !important;
+                  padding: 0px !important;
+                  border: none !important;
+                  display: block !important;
+                  background: transparent !important;
+                  position: relative !important;
+                  opacity: 1 !important;
+                "
+              >
+                <iframe
+                  name="__privateStripeFrame5923"
+                  frameborder="0"
+                  allowtransparency="true"
+                  scrolling="no"
+                  role="presentation"
+                  allow="payment *"
+                  src="https://js.stripe.com/v3/elements-inner-card-148eed9b1b727bcfe0255b3d7543fe69.html#deferredIntent[mode]=payment&amp;deferredIntent[currency]=eur&amp;deferredIntent[amount]=5500&amp;wait=false&amp;mids[guid]=622e4a5d-6dbc-4bdd-8797-25344bcbb84be33034&amp;mids[muid]=e1a2fabe-bf1e-409d-939c-3b81acc2b8e0c1eca7&amp;mids[sid]=7bebb89c-fca0-4aca-92ae-26a1c63ea40a5aa63a&amp;hidePostalCode=true&amp;rtl=false&amp;componentName=card&amp;keyMode=test&amp;apiKey=pk_test_51KoqfeLqZEQtkS6ns0xnihr3snqP0sw05BkkZxL25njoiIudmhBhKUzp7pSo3Tkrs36bEdDm1W5X929wAIBWhHfj00V3EVEwQS&amp;referrer=https%3A%2F%2Fwoonuxt-v3.vercel.app%2Fcheckout&amp;controllerId=__privateStripeController5921"
+                  title="Secure card payment input frame"
+                  style="
+                    border: 0px !important;
+                    margin-top: 0px;
+                    margin-right: 0px !important;
+                    margin-bottom: 0px !important;
+                    margin-left: 0px !important;
+                    padding: 0px !important;
+                    width: 1px !important;
+                    min-width: 100% !important;
+                    overflow: hidden !important;
+                    display: block !important;
+                    user-select: none !important;
+                    transform: translate(0px) !important;
+                    color-scheme: light only !important;
+                    height: 16.8px;
+                  "
+                ></iframe
+                ><input
+                  class="-input"
+                  aria-hidden="true"
+                  aria-label=" "
+                  autocomplete="false"
+                  maxlength="1"
+                  style="
+                    border: none !important;
+                    display: block !important;
+                    position: absolute !important;
+                    height: 1px !important;
+                    top: -1px !important;
+                    left: 0px !important;
+                    padding: 0px !important;
+                    margin: 0px !important;
+                    width: 100% !important;
+                    opacity: 0 !important;
+                    background: transparent !important;
+                    pointer-events: none !important;
+                    font-size: 16px !important;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="mb-4 text-xl font-semibold">Order Note (Optional)</h2>
+            <textarea
+              id="order-note"
+              name="order-note"
+              class="w-full"
+              rows="4"
+              placeholder="Notes about your order, e.g. special notes for delivery."
+            ></textarea>
+          </div>
+        </div>
+        <aside
+          class="bg-white rounded-lg shadow-lg mb-8 w-full min-h-[280px] p-8 relative md:max-w-md md:top-32 md:sticky"
+        >
+          <h2 class="mb-6 text-xl font-semibold leading-none">Order Summary</h2>
+          <ul class="flex flex-col gap-4 -mr-2 overflow-y-scroll">
+            <div
+              class="rounded-lg flex h-16 w-full overflow-hidden relative items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 512 512"
+                class="transform transition-all right-0 w-6 scale-0 absolute"
+              >
+                <path
+                  d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M80 112h352"
+                ></path>
+                <path
+                  d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+              </svg>
+              <div
+                class="rounded-lg inset-0 absolute transition-all"
+                style="transform: none"
+              >
+                <div class="flex items-center gap-3 group">
+                  <a href="" class=""
+                    ><img
+                      width="64"
+                      height="64"
+                      class="w-16 h-16 rounded-md skeleton"
+                      src="https://secure.woonuxt.com/wp-content/uploads/2021/10/hoodie_2_front-150x150.jpg"
+                      alt="Woo Ninja"
+                      title="hoodie_2_front.jpg"
+                      loading="lazy"
+                  /></a>
+                  <div class="flex-1">
+                    <div class="flex gap-x-2 gap-y-1 flex-wrap items-center">
+                      <a href="" class="leading-tight">Woo Ninja</a
+                      ><span
+                        class="text-[10px] border-green-200 leading-none bg-green-100 inline-block p-0.5 rounded text-green-600 border"
+                        >Save 10%</span
+                      ><!---->
+                    </div>
+                    <div class="flex font-semibold mt-1 text-xs">
+                      <span class="text-gray-400 line-through font-normal"
+                        >€50.00</span
+                      ><span class="ml-2">€45.00</span>
+                    </div>
+                  </div>
+                  <div class="inline-flex gap-2 flex-col items-end">
+                    <div
+                      data-v-04bd7bbf=""
+                      class="flex rounded bg-white text-sm leading-none shadow-sm shadow-gray-200 isolate"
+                    >
+                      <button
+                        data-v-04bd7bbf=""
+                        title="Decrease Quantity"
+                        aria-label="Decrease Quantity"
+                        type="button"
+                        class="focus:outline-none border-r w-6 h-9 border rounded-l border-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M400 256H112"
+                          ></path>
+                        </svg></button
+                      ><input
+                        data-v-04bd7bbf=""
+                        type="number"
+                        min="0"
+                        aria-label="Quantity"
+                        class="flex items-center justify-center w-8 px-2 text-right text-xs focus:outline-none border-y border-gray-300"
+                      /><button
+                        data-v-04bd7bbf=""
+                        title="Increase Quantity"
+                        aria-label="Increase Quantity"
+                        type="button"
+                        class="focus:outline-none border-l w-6 h-9 border rounded-r hover:bg-gray-50 border-gray-300 disabled:cursor-not-allowed disabled:bg-gray-100"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M256 112v288m144-144H112"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="text-xs text-gray-400 group-hover:text-gray-700 flex leading-none items-center"
+                    >
+                      <button class="mr-2 pr-2 border-r" type="button">
+                        Move to Wishlist</button
+                      ><button
+                        title="Remove Item"
+                        aria-label="Remove Item"
+                        type="button"
+                        class="flex items-center gap-1 hover:text-red-500 cursor-pointer"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon hidden md:inline-block"
+                          width="12px"
+                          height="12px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8"
+                          ></path>
+                          <path
+                            fill="currentColor"
+                            d="M432 96h-96V72a40 40 0 0 0-40-40h-80a40 40 0 0 0-40 40v24H80a16 16 0 0 0 0 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 0 0 0-32M192.57 416H192a16 16 0 0 1-16-15.43l-8-224a16 16 0 1 1 32-1.14l8 224A16 16 0 0 1 192.57 416M272 400a16 16 0 0 1-32 0V176a16 16 0 0 1 32 0Zm32-304h-96V72a7.91 7.91 0 0 1 8-8h80a7.91 7.91 0 0 1 8 8Zm32 304.57A16 16 0 0 1 320 416h-.58A16 16 0 0 1 304 399.43l8-224a16 16 0 1 1 32 1.14Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg flex h-16 w-full overflow-hidden relative items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 512 512"
+                class="transform transition-all right-0 w-6 scale-0 absolute"
+              >
+                <path
+                  d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M80 112h352"
+                ></path>
+                <path
+                  d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+              </svg>
+              <div
+                class="rounded-lg inset-0 absolute transition-all"
+                style="transform: none"
+              >
+                <div class="flex items-center gap-3 group">
+                  <a href="" class=""
+                    ><img
+                      width="64"
+                      height="64"
+                      class="w-16 h-16 rounded-md skeleton"
+                      src="https://secure.woonuxt.com/wp-content/uploads/2021/10/hoodie_6_front-150x150.jpg"
+                      alt="Woo Logo"
+                      title="hoodie_6_front.jpg"
+                      loading="lazy"
+                  /></a>
+                  <div class="flex-1">
+                    <div class="flex gap-x-2 gap-y-1 flex-wrap items-center">
+                      <a href="" class="leading-tight">Woo Logo</a
+                      ><!----><!---->
+                    </div>
+                    <div class="flex font-semibold mt-1 text-xs">
+                      <span class="">€35.00</span
+                      ><!---->
+                    </div>
+                  </div>
+                  <div class="inline-flex gap-2 flex-col items-end">
+                    <div
+                      data-v-04bd7bbf=""
+                      class="flex rounded bg-white text-sm leading-none shadow-sm shadow-gray-200 isolate"
+                    >
+                      <button
+                        data-v-04bd7bbf=""
+                        title="Decrease Quantity"
+                        aria-label="Decrease Quantity"
+                        type="button"
+                        class="focus:outline-none border-r w-6 h-9 border rounded-l border-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed"
+                        disabled=""
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M400 256H112"
+                          ></path>
+                        </svg></button
+                      ><input
+                        data-v-04bd7bbf=""
+                        type="number"
+                        min="0"
+                        aria-label="Quantity"
+                        class="flex items-center justify-center w-8 px-2 text-right text-xs focus:outline-none border-y border-gray-300"
+                      /><button
+                        data-v-04bd7bbf=""
+                        title="Increase Quantity"
+                        aria-label="Increase Quantity"
+                        type="button"
+                        class="focus:outline-none border-l w-6 h-9 border rounded-r hover:bg-gray-50 border-gray-300 disabled:cursor-not-allowed disabled:bg-gray-100"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M256 112v288m144-144H112"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="text-xs text-gray-400 group-hover:text-gray-700 flex leading-none items-center"
+                    >
+                      <button class="mr-2 pr-2 border-r" type="button">
+                        Move to Wishlist</button
+                      ><button
+                        title="Remove Item"
+                        aria-label="Remove Item"
+                        type="button"
+                        class="flex items-center gap-1 hover:text-red-500 cursor-pointer"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon hidden md:inline-block"
+                          width="12px"
+                          height="12px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8"
+                          ></path>
+                          <path
+                            fill="currentColor"
+                            d="M432 96h-96V72a40 40 0 0 0-40-40h-80a40 40 0 0 0-40 40v24H80a16 16 0 0 0 0 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 0 0 0-32M192.57 416H192a16 16 0 0 1-16-15.43l-8-224a16 16 0 1 1 32-1.14l8 224A16 16 0 0 1 192.57 416M272 400a16 16 0 0 1-32 0V176a16 16 0 0 1 32 0Zm32-304h-96V72a7.91 7.91 0 0 1 8-8h80a7.91 7.91 0 0 1 8 8Zm32 304.57A16 16 0 0 1 320 416h-.58A16 16 0 0 1 304 399.43l8-224a16 16 0 1 1 32 1.14Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-lg flex h-16 w-full overflow-hidden relative items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 512 512"
+                class="transform transition-all right-0 w-6 scale-0 absolute"
+              >
+                <path
+                  d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                  d="M80 112h352"
+                ></path>
+                <path
+                  d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="32"
+                ></path>
+              </svg>
+              <div
+                class="rounded-lg inset-0 absolute transition-all"
+                style="transform: none"
+              >
+                <div class="flex items-center gap-3 group">
+                  <a href="" class=""
+                    ><img
+                      width="64"
+                      height="64"
+                      class="w-16 h-16 rounded-md skeleton"
+                      src="https://secure.woonuxt.com/wp-content/uploads/2021/10/hoodie_6_front-150x150.jpg"
+                      alt="Woo Logo"
+                      title="hoodie_6_front.jpg"
+                      loading="lazy"
+                  /></a>
+                  <div class="flex-1">
+                    <div class="flex gap-x-2 gap-y-1 flex-wrap items-center">
+                      <a href="" class="leading-tight">Woo Logo</a
+                      ><!----><!---->
+                    </div>
+                    <div class="flex font-semibold mt-1 text-xs">
+                      <span class="">€35.00</span
+                      ><!---->
+                    </div>
+                  </div>
+                  <div class="inline-flex gap-2 flex-col items-end">
+                    <div
+                      data-v-04bd7bbf=""
+                      class="flex rounded bg-white text-sm leading-none shadow-sm shadow-gray-200 isolate"
+                    >
+                      <button
+                        data-v-04bd7bbf=""
+                        title="Decrease Quantity"
+                        aria-label="Decrease Quantity"
+                        type="button"
+                        class="focus:outline-none border-r w-6 h-9 border rounded-l border-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed"
+                        disabled=""
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M400 256H112"
+                          ></path>
+                        </svg></button
+                      ><input
+                        data-v-04bd7bbf=""
+                        type="number"
+                        min="0"
+                        aria-label="Quantity"
+                        class="flex items-center justify-center w-8 px-2 text-right text-xs focus:outline-none border-y border-gray-300"
+                      /><button
+                        data-v-04bd7bbf=""
+                        title="Increase Quantity"
+                        aria-label="Increase Quantity"
+                        type="button"
+                        class="focus:outline-none border-l w-6 h-9 border rounded-r hover:bg-gray-50 border-gray-300 disabled:cursor-not-allowed disabled:bg-gray-100"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          data-v-04bd7bbf=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon"
+                          width="14px"
+                          height="14px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="32"
+                            d="M256 112v288m144-144H112"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="text-xs text-gray-400 group-hover:text-gray-700 flex leading-none items-center"
+                    >
+                      <button class="mr-2 pr-2 border-r" type="button">
+                        Move to Wishlist</button
+                      ><button
+                        title="Remove Item"
+                        aria-label="Remove Item"
+                        type="button"
+                        class="flex items-center gap-1 hover:text-red-500 cursor-pointer"
+                      >
+                        <svg
+                          data-v-4847b53f=""
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="icon hidden md:inline-block"
+                          width="12px"
+                          height="12px"
+                          viewBox="0 0 512 512"
+                        >
+                          <path
+                            fill="none"
+                            d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8"
+                          ></path>
+                          <path
+                            fill="currentColor"
+                            d="M432 96h-96V72a40 40 0 0 0-40-40h-80a40 40 0 0 0-40 40v24H80a16 16 0 0 0 0 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 0 0 0-32M192.57 416H192a16 16 0 0 1-16-15.43l-8-224a16 16 0 1 1 32-1.14l8 224A16 16 0 0 1 192.57 416M272 400a16 16 0 0 1-32 0V176a16 16 0 0 1 32 0Zm32-304h-96V72a7.91 7.91 0 0 1 8-8h80a7.91 7.91 0 0 1 8 8Zm32 304.57A16 16 0 0 1 320 416h-.58A16 16 0 0 1 304 399.43l8-224a16 16 0 1 1 32 1.14Z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+          <div class="my-8">
+            <form class="flex gap-1">
+              <input
+                id="couponCode"
+                type="text"
+                placeholder="Coupon Code"
+                class="w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm outline-none"
+                required=""
+              /><button
+                class="flex items-center justify-center px-4 py-2 text-white bg-gray-800 border rounded-md shadow-sm outline-none min-w-20 mt-2"
+              >
+                <span>Apply</span>
+              </button>
+            </form>
+          </div>
+          <div class="grid gap-1 text-sm font-semibold text-gray-500">
+            <div class="flex justify-between">
+              <span>Subtotal</span
+              ><span class="text-gray-700 tabular-nums">€45.00</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Shipping</span
+              ><span class="text-gray-700 tabular-nums"
+                >+<span>€10.00</span></span
+              >
+            </div>
+
+            <div class="flex justify-between mt-4">
+              <span>Total</span
+              ><span class="text-lg font-bold text-gray-700 tabular-nums"
+                >€55.00</span
+              >
+            </div>
+          </div>
+          <button
+            class="flex items-center justify-center w-full gap-3 p-3 mt-4 font-semibold text-center rounded-lg shadow-md text-white bg-gray-800"
+          >
+            Checkout
+          </button>
+        </aside>
+      </form>
+    </div>
+  </body>
+</html>
