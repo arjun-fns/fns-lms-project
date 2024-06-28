@@ -6,6 +6,8 @@ module.exports = {
        "./sanket/*.{html,js}",
        "./sanket/alpinemenu/*.{html,js}",
        "./manish/*.{html,js}",
+       "./Aditya/product-details-2/*.{html,js}",
+
 
     ],
     theme: {
