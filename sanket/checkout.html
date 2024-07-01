@@ -114,23 +114,21 @@
                 ><input placeholder="Dublin 1" type="text" />
               </div>
               <div class="w-full">
-                <label for="city">City</label
-                ><input placeholder="Dublin" type="text" required="" />
+                <label for="Country">Country</label>
+                <select class="country" onchange="loadStates()">
+                  <option value="">Select Country</option>
+                </select>
               </div>
               <div class="w-full">
-                <label for="state">State</label
-                ><input type="text" placeholder="State" default-value="CW" />
+                <label for="state">State</label>
+                <select class="state" onchange="loadCities()">
+                  <option value="">Select State</option>
+                </select>
               </div>
               <div class="w-full">
-                <label for="state">Country</label>
-                <select>
-                  <option value="">Select a country</option>
-                  <option value="">Country 1</option>
-                  <option value="">Country 2</option>
-                  <option value="">Country 3</option>
-                  <option value="">Country 4</option>
-                  <option value="">Country 5</option>
-                  <option value="">Country 6</option>
+                <label for="city">City</label>
+                <select class="city">
+                  <option value="">Select City</option>
                 </select>
               </div>
               <div class="w-full">
@@ -964,5 +962,7 @@
         </aside>
       </form>
     </div>
+
+    <script src="checkout.js"></script>
   </body>
 </html>
