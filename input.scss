@@ -3,8 +3,34 @@
 @tailwind utilities;
 
 
-.test {
-    .nested {
-        border: 1px solid;
+// Navbar related code
+
+
+.mylists li {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+        /* background-color: rgb(197, 216, 197); */
+        color: rgb(5, 36, 5);
+        cursor: pointer;
     }
 }
+
+.myarrow {
+    transition: 0.1s ease-in;
+}
+
+.arrow:hover .myarrow {
+    transform: translateX(30%);
+    color: rgb(95, 205, 95);
+}
+
+.ham:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+
+
+// /Navbar related code - end of line
