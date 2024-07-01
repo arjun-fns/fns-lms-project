@@ -5,7 +5,7 @@ module.exports = {
        "./auth-ui/*.{html,js}",
        "./sanket/*.{html,js}",
        "./sanket/alpinemenu/*.{html,js}",
-       "./manish/*.{html,js}",
+       "./manish/patil/*.{html,js}",
 
     ],
     theme: {
