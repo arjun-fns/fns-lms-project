@@ -34,3 +34,36 @@
 
 
 // /Navbar related code - end of line
+
+
+
+// test trial
+
+ul#menu-main-menu {
+    @apply flex flex-row justify-center;
+
+    li {
+        @apply inline px-2;
+    }
+}
+
+.has_mega_menu ul {
+    @apply grid border-2 border-red-500;
+}
+
+li.is_separate_column ul {
+    @apply flex flex-col;
+}
+
+
+
+@for $i from 1 through 4 {
+  .gridscount-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+
+
+
+// .has_mega_menu

@@ -1127,6 +1127,11 @@ select {
   clear: both;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-28 {
   margin-left: 7rem;
   margin-right: 7rem;
@@ -1160,11 +1165,6 @@ select {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .-ms-64 {
@@ -2579,8 +2579,69 @@ select {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.test .nested {
-  border: 1px solid;
+.mylists li {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.mylists li:hover {
+  /* background-color: rgb(197, 216, 197); */
+  color: #052405;
+  cursor: pointer;
+}
+
+.myarrow {
+  transition: 0.1s ease-in;
+}
+
+.arrow:hover .myarrow {
+  transform: translateX(30%);
+  color: #5fcd5f;
+}
+
+.ham:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+
+ul#menu-main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul#menu-main-menu li {
+  display: inline;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.has_mega_menu ul {
+  display: grid;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+li.is_separate_column ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridscount-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gridscount-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gridscount-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gridscount-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .after\:absolute::after {

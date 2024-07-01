@@ -1,5 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.test .nested {
-  border: 1px solid; }
+.mylists li {
+  padding: 0.5rem;
+  border-radius: 0.5rem; }
+  .mylists li:hover {
+    /* background-color: rgb(197, 216, 197); */
+    color: #052405;
+    cursor: pointer; }
+
+.myarrow {
+  transition: 0.1s ease-in; }
+
+.arrow:hover .myarrow {
+  transform: translateX(30%);
+  color: #5fcd5f; }
+
+.ham:hover {
+  cursor: pointer;
+  color: blueviolet; }
+
+ul#menu-main-menu {
+  @apply flex flex-row justify-center; }
+  ul#menu-main-menu li {
+    @apply inline px-2; }
+
+.has_mega_menu ul {
+  @apply grid border-2 border-red-500; }
+
+li.is_separate_column ul {
+  @apply flex flex-col; }
+
+.gridscount-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+.gridscount-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.gridscount-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.gridscount-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr)); }

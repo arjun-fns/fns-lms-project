@@ -12,9 +12,11 @@
 
 <body class="bg-white">
     <div class="bg-white flex justify-between items-baseline pt-4 md:pt-8 px-2 md:px-8 gap-4 relative">
+        <!-- Logo (left) -->
         <div>
             <h1 class="text-2xl font-bold text-black border-t-2 border-b-2 border-black">LANDMARK</h1>
         </div>
+        <!-- Center nav items -->
         <ul class="flex gap-4">
             <li class="hidden md:block" data-dropdown>
                 <button class="text-black text-md inline-flex items-center hover:text-green-900 font-inherit"
@@ -25,7 +27,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
                 </button>
-                <div class="absolute left-0 right-0 mx-auto mt-4 col-span-6  w-[90%]  bg-white  rounded shadow-md invisible opacity-0   transition-all duration-300 ease-in-out"
+                <!-- invisible opacity-0 -->
+                <div class="absolute left-0 right-0 mx-auto mt-4 col-span-6  w-[90%]  bg-white  rounded shadow-md    transition-all duration-300 ease-in-out"
                     data-dropdown-menu>
                     <div class="grid grid-cols-4 gap-4 p-4">
                         <!-- Column 1: Hoverable Links -->
@@ -336,10 +339,12 @@
             </li>
         </ul>
 
+        <!-- Right nav items -->
         <div>
             <button class="hidden md:block p-2 bg-green-600 text-white rounded-lg">Buy now!</button>
         </div>
 
+        <!-- Icon management -->
         <div id="ham" onclick="hamShow()" class="block md:hidden ham">
             <i class="text-4xl bi bi-list"></i>
         </div>
@@ -347,6 +352,7 @@
         <div id="cross" onclick="hamClose()" class="hidden lg:hidden animate-[spin_1s_ease-in-out]">
             <i class="text-2xl text-red-800 bi bi-x-lg"></i>
         </div>
+        <!-- / Icon management -->
 
 
         <!-- for hamburger -->
@@ -693,66 +699,7 @@
     </div>
 
 
-    <script>
-
-
-        let toggleDropdown = (dropdownId) => {
-            let dropdown = document.getElementById(dropdownId);
-            if (dropdown.classList.contains('hidden')) {
-                dropdown.classList.remove('hidden');
-            } else {
-                dropdown.classList.add('hidden');
-            }
-        }
-
-
-        let hamShow = () => {
-            console.log("in hamshow")
-            let temp = document.getElementById('hambtn')
-            document.getElementById('ham').classList.add('hidden')
-            document.getElementById('cross').classList.remove('hidden');
-            temp.classList.remove('invisible', "opacity-0");
-        }
-
-        let hamClose = () => {
-            let temp = document.getElementById('hambtn')
-            temp.classList.add('invisible', "opacity-0")
-            document.getElementById('ham').classList.remove('hidden')
-            document.getElementById('cross').classList.add('hidden')
-        }
-
-        document.querySelectorAll("[data-dropdown]").forEach(dropdown => {
-            const button = dropdown.querySelector("[data-dropdown-button]")
-            const menu = dropdown.querySelector("[data-dropdown-menu]")
-            button.addEventListener("mouseover", () => {
-                menu.classList.remove("invisible", "opacity-0")
-            })
-            button.addEventListener("mouseout", () => {
-                menu.classList.add("invisible", "opacity-0")
-            })
-            menu.addEventListener("mouseover", () => {
-                menu.classList.remove("invisible", "opacity-0")
-            })
-            menu.addEventListener("mouseout", () => {
-                menu.classList.add("invisible", "opacity-0")
-            })
-        })
-        document.querySelectorAll("[data-submenu-trigger]").forEach(trigger => {
-            const submenu = trigger.querySelector("[data-submenu]")
-            trigger.addEventListener("mouseover", () => {
-                submenu.classList.remove("invisible", "opacity-0")
-            })
-            trigger.addEventListener("mouseout", () => {
-                submenu.classList.add("invisible", "opacity-0")
-            })
-            submenu.addEventListener("mouseover", () => {
-                submenu.classList.remove("invisible", "opacity-0")
-            })
-            submenu.addEventListener("mouseout", () => {
-                submenu.classList.add("invisible", "opacity-0")
-            })
-        })
-    </script>
+   <script src="nav.js"></script>
 </body>
 
 </html>
