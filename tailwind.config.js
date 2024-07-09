@@ -13,6 +13,7 @@ module.exports = {
         "./siddhant/ord_cnf/*.{html,js}",
         "./siddhant/payment/*.{html,js}",
         "./siddhant/home-page1/*.{html,js}",
+        "./siddhant/homepage2/*.{html,js}",
         "./prashant/Login/*.{html,js}",
 
     ],

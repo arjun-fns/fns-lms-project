@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="./output.css" rel="stylesheet" /> -->
+    <link href="../../output.css" rel="stylesheet" />
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mx-auto p-4 items-center flex flex-col">
+      <section
+        class="relative w-full h-64 sm:h-80 md:h-96 lg:h-screen overflow-hidden"
+      >
+        <img
+          src="./images/hero.png"
+          alt="Banner Image"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-end"
+        >
+          <div
+            class="text-right w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2 px-4"
+          >
+            <h1
+              class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
+            >
+              New Trend
+            </h1>
+            <p
+              class="text-white mt-4 text-base sm:text-lg md:text-xl lg:text-2xl"
+            >
+              An exclusive selection of this season's trends
+            </p>
+            <a
+              href="#"
+              class="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+            >
+              Shop Now
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="px-5 py-10 content__center">
+      <div class="flex justify-end p-4 bg-gray-100">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h3 class="text-sm font-bold">SHOP BY CATAGEORY</h3>
+        <p class="text-[15px] mb-4 font-normal text-center">
+          Shop our new arrivals from catageoty
+        </p>
+      </div>
+
+      <div
+        class="grid gap-6 grid-flow-row justify-items-center lg:justify-items-stretch lg:grid-flow-row w-full lg:h-[574px]"
+      >
+        <div
+          class="relative lg:col-span-2 transition-all duration-300 ease-in-out hover:scale-105 group cursor-pointer"
+        >
+          <img
+            class="w-[300px] h-[300px] lg:w-full lg:h-[286.8px] object-cover object-top"
+            src="./images/main1.jpg"
+            alt="man"
+          />
+          <div
+            class="absolute bottom-0 left-0 px-5 overflow-hidden z-1 bg-black/30 group-hover:w-[300px] group-hover:h-[300px] lg:group-hover:w-full lg:group-hover:h-full"
+          >
+            <p
+              class="flex items-center justify-center h-full text-lg text-white uppercase opacity-0 group-hover:opacity-100"
+            >
+              Clothes
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative lg:col-span-1 transition-all duration-300 ease-in-out hover:scale-105 group cursor-pointer"
+        >
+          <img
+            class="w-[300px] h-[300px] lg:w-full lg:h-[265.15px] object-cover object-center"
+            src="./images/main2.jpg"
+            alt="Women"
+          />
+          <div
+            class="absolute bottom-0 left-0 px-5 overflow-hidden z-1 bg-black/30 group-hover:w-[300px] group-hover:h-[300px] lg:group-hover:w-full lg:group-hover:h-full"
+          >
+            <p
+              class="flex items-center justify-center h-full text-lg text-white uppercase opacity-0 group-hover:opacity-100"
+            >
+              Footwear <br />
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative lg:col-span-1 transition-all duration-300 ease-in-out hover:scale-105 group cursor-pointer"
+        >
+          <img
+            class="w-[300px] h-[300px] lg:w-full lg:h-[265.15px] object-cover object-center"
+            src="./images/main3.jpg"
+            alt="Women"
+          />
+          <div
+            class="absolute bottom-0 left-0 px-5 overflow-hidden z-1 bg-black/30 group-hover:w-[300px] group-hover:h-[300px] lg:group-hover:w-full lg:group-hover:h-full"
+          >
+            <p
+              class="flex items-center justify-center h-full text-lg text-white uppercase opacity-0 group-hover:opacity-100"
+            >
+              Jewelry
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative lg:col-start-3 lg:row-start-1 lg:row-end-3 transition-all duration-300 ease-in-out hover:scale-105 group cursor-pointer"
+        >
+          <img
+            class="w-[300px] h-[300px] lg:w-full lg:h-[574px] object-cover object-center"
+            src="./images/main5.jpg"
+            alt="man"
+          />
+          <div
+            class="absolute bottom-0 left-0 px-5 overflow-hidden z-1 bg-black/30 group-hover:w-[300px] group-hover:h-[300px] lg:group-hover:w-full lg:group-hover:h-full"
+          >
+            <p
+              class="flex items-center justify-center h-full text-lg text-white uppercase opacity-0 group-hover:opacity-100"
+            >
+              Cosmetics
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Women's section -->
+    <section class="px-5 py-10 content__center animate-fade-bottom">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h3 class="text-sm font-bold">WOMEN’S FASHION</h3>
+        <p class="text-[15px] font-normal text-center">
+          Shop our new arrivals from established brands
+        </p>
+      </div>
+
+      <div
+        class="swiper-container mt-16 overflow-x-auto hide-scrollbar no-scrollbar"
+      >
+        <div class="swiper-wrapper flex gap-6 justify-start md:flex-nowrap">
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf1.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                Cool for You Pocketed Blazer
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf2.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf3.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Women's section End -->
+
+    <!-- Men's section -->
+    <section class="px-5 py-10 content__center animate-fade-bottom">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <h3 class="text-sm font-bold">MEN’S FASHION</h3>
+        <p class="text-[15px] font-normal text-center">
+          Shop our new arrivals from established brands
+        </p>
+      </div>
+
+      <div
+        class="swiper-container mt-16 overflow-x-auto hide-scrollbar no-scrollbar"
+      >
+        <div class="swiper-wrapper flex gap-6 justify-start md:flex-nowrap">
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/mf1.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                Cool for You Pocketed Blazer
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/mf2.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/mf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/man6.jpg"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/wf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide flex flex-col gap-6 min-w-[268px]">
+            <img
+              class="w-full h-auto object-cover"
+              src="./images/mf4.png"
+              alt="womens"
+            />
+            <div class="flex flex-col gap-1">
+              <p class="text-[15px] font-light">IGURE</p>
+              <h4 class="text-[15px] font-semibold">
+                GREEN MUSCLE FIT POLO SHIRT
+              </h4>
+              <div class="flex flex-row gap-3">
+                <p class="text-[15px] font-normal line-through">$229.00</p>
+                <h5 class="text-[15px] text-[#CF2929]">$129.00</h5>
+                <a
+                  href="#"
+                  class="inline-block px-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+                >
+                  Shop Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Men's section End -->
+    <section class="relative section__spacing-y">
+      <div>
+        <img
+          src="./images/t19.png"
+          alt="hero-image"
+          class="w-full object-cover object-right h-[400px] md:h-[600px] xl:h-[700px] 2xl:h-[800px]"
+        />
+
+        <div
+          class="p-4 mx-5 absolute bottom-1/4 md:bottom-1/2 transform md:-translate-y-1/2 flex flex-col justify-start text-base font-medium md:left-[10%] md:text-lg xl:pr-20 2xl:pr-56 animate-fade-left overflow-hidden"
+        >
+          <h2>OWN THE DAY</h2>
+          <h1
+            class="text-[20px] md:text-4xl xl:text-[48px] 2xl:text-[64px] leading-normal font-bold"
+          >
+            TACHEN 19
+          </h1>
+          <div class="flex flex-row gap-4 my-5 lg:my-8">
+            <a href="#">
+              <button type="button" class="py-2 text-black bg-black-text">
+                SHOP COLLECTION
+              </button>
+              <a
+                href="#"
+                class="inline-block px-2 py-2 bg-indigo-600 text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold rounded-lg shadow-md hover:bg-indigo-700"
+              >
+                Shop Now
+              </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- brand dir start -->
+    <div class="footer-category bg-gray-100 py-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="footer-category-title text-lg font-semibold mb-4">
+          Brand directory
+        </h2>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <div class="footer-category-box bg-white p-4 rounded-md shadow-md">
+            <h3 class="category-box-title font-medium mb-2">Fashion :</h3>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Shirts</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >T-shirt</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >shorts & jeans</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >jacket</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >dress & frock</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >innerwear</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >hosiery</a
+            >
+          </div>
+
+          <div class="footer-category-box bg-white p-4 rounded-md shadow-md">
+            <h3 class="category-box-title font-medium mb-2">Footwear :</h3>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >sport</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >formal</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Boots</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >casual</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >cowboy shoes</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >safety shoes</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >hosiery</a
+            >
+          </div>
+          <div class="footer-category-box bg-white p-4 rounded-md shadow-md">
+            <h3 class="category-box-title font-medium mb-2">jewellery :</h3>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Earrings
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Couple rings
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Crystal
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Bangles
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >bracelets</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >safety shoes</a
+            >
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >nosepin</a
+            >
+          </div>
+          <div class="footer-category-box bg-white p-4 rounded-md shadow-md">
+            <h3 class="category-box-title font-medium mb-2">cosmetics :</h3>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Shampoo
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Bodywash
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >Facewash
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >makeup
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >liner
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >lipstick
+            </a>
+
+            <a
+              href="#"
+              class="footer-category-link inline-block px-4 py-2 mb-2 border border-gray-300 rounded-lg bg-gray-100 hover:bg-gray-200 hover:border-gray-400"
+              >perfume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- brand dir end -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        freeMode: true,
+      });
+    </script>
+  </body>
+</html>
